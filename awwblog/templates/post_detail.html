@@ -21,6 +21,16 @@
         <div class="article-body">
                 {{post.body|safe}}
         </div>
+
+        <p>
+            <strong>Tags:</strong>
+            {% for tag in post.tags.all %}
+                <a href="{% url 'blog:post_tag' tag.slug %}" class="link-light text-decoration-none badge bg-secondary">
+                    {{tag.name}}
+                </a>
+                <!-- {% if not forloop.last %}, {% endif %} -->
+            {% endfor %}
+        </p>
         
     </article>
     
