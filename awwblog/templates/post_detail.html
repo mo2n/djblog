@@ -5,7 +5,11 @@
 {% block content %}
     <article>
         <figure>
-         <img src="https://via.placeholder.com/1280x720" class="rounded" alt="{{post.title}}">
+            {% if post.image %}                        
+            <img src="{{ post.image.url }}" class="rounded featured-image-list" alt="{{post.title}}">
+            {% else %}
+            <img src="https://via.placeholder.com/1280x720" class="rounded" alt="{{post.title}}">
+            {% endif %}
         </figure>
         <div class="mt-3">
             <h1>{{post.title}}</h1>
