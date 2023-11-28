@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,6 @@ MEDIA_ROOT = BASE_DIR / "media/"
 
 #ckeditor upload path
 CKEDITOR_UPLOAD_PATH="uploads/"
+
+#Taggit
+TAGGIT_CASE_INSENSITIVE = True

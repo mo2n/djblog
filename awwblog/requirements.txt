@@ -2,6 +2,8 @@ asgiref==3.7.2
 Django==4.2.7
 django-ckeditor==6.7.0
 django-js-asset==2.1.0
+django-sitemaps==2.0.1
 django-taggit==5.0.1
+lxml==4.9.3
 Pillow==10.1.0
 sqlparse==0.4.4

@@ -5,8 +5,14 @@ from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from taggit.models import Tag
 from django.db.models import Count, Q
+from django.views.generic import ListView, DetailView
 
-
+class PostList(ListView):
+    model = Post
+    # paginate_by="5"
+    queryset=Post.published.all()
+    context_object_name = "posts"
+    template_name = "post_list.html"
 
 def post_list(request, tag_slug=None):
     posts = Post.published.all()
